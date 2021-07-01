@@ -41,6 +41,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/kgupta/Downloads/selenium-server-standalone-3.141.59(1).jar"/>
+	<classpathentry kind="lib" path="D:/software/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
