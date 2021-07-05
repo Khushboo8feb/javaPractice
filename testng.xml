@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name = "practice">
+
+<test name = "testNGAnnotationPractice">
+<groups>
+<define name="all">
+<include name="SmokeTest"></include>
+<include name="RegressionTest"></include>
+</define>
+
+<run>
+<include name="all"></include>
+<exclude name="SanityTest"></exclude>
+</run>
+</groups>
+<classes>
+<class name = "com.practice.testng.TestNGAnnotation"></class>
+<class name="com.practice.testng.ModuleA"></class>
+<class name="com.practice.testng.ModuleB"></class>
+<class name="com.practice.testng.TestNGException"></class>
+</classes>
+</test>
+</suite>
