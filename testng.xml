@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name = "practice">
-
+<suite name = "practice" parallel = "methods" thread-count = "1">
+<listeners>
+<listener class-name="com.practice.testng.ListenerTestNG"></listener>
+<listener class-name="com.practice.testng.RetryListernerClass"></listener>
+</listeners>
 <test name = "testNGAnnotationPractice">
+<parameter name="browser" value="chrome"></parameter>
 <groups>
+
 <define name="all">
 <include name="SmokeTest"></include>
 <include name="RegressionTest"></include>
@@ -13,12 +18,19 @@
 <include name="all"></include>
 <exclude name="SanityTest"></exclude>
 </run>
+
 </groups>
 <classes>
 <class name = "com.practice.testng.TestNGAnnotation"></class>
 <class name="com.practice.testng.ModuleA"></class>
 <class name="com.practice.testng.ModuleB"></class>
 <class name="com.practice.testng.TestNGException"></class>
+<class name="com.practice.testng.DependsOnGroupsTestCase"></class>
+<class name="com.practice.testng.ParameterizedTestNGXML"></class>
+<class name="com.practice.testng.ParallelTest"></class>
+<class name="com.practice.testng.ListenerTestNGTestCase"></class>
+<class name="com.practice.testng.Test1"></class>
+<class name="com.practice.testng.Test2"></class>
 </classes>
 </test>
-</suite>
+</suite>	
